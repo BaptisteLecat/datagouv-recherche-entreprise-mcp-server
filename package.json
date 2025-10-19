@@ -1,0 +1,38 @@
+{
+  "name": "datagouv-recherche-entreprise-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for the French Government's API Recherche d'Entreprises",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "watch": "tsx watch src/index.ts",
+    "docker:build": "./build-docker.sh",
+    "docker:run": "docker run -it --rm french-business-mcp:latest",
+    "docker:compose": "docker-compose up",
+    "docker:compose:build": "docker-compose up --build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "french-government",
+    "business-search",
+    "sirene",
+    "api"
+  ],
+  "author": "BaptisteLecat",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

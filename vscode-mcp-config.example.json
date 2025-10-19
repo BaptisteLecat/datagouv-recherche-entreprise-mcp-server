@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "french-business-search-docker": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "french-business-mcp:latest"
+      ],
+      "description": "Search French businesses via government API (Docker)",
+      "env": {}
+    },
+    "french-business-search-local": {
+      "command": "node",
+      "args": [
+        "/path/to/datagouv-recherche-entreprise-mcp-server/dist/index.js"
+      ],
+      "description": "Search French businesses via government API (Local Node.js)",
+      "env": {}
+    },
+    "french-business-search-compose": {
+      "command": "docker-compose",
+      "args": [
+        "-f",
+        "/path/to/datagouv-recherche-entreprise-mcp-server/docker-compose.yml",
+        "run",
+        "--rm",
+        "french-business-mcp"
+      ],
+      "description": "Search French businesses via government API (Docker Compose)",
+      "env": {}
+    }
+  }
+}
